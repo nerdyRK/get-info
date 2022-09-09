@@ -5,6 +5,6 @@ let os = require("os");
 // console.log(global);
 app.use(express.static(__dirname));
 app.get("/info", (req, res) => {
-  res.send(os.userInfo(),process.env.PORT);
+  res.send(os.userInfo());
 });
 app.listen(process.env.PORT || 5000);
